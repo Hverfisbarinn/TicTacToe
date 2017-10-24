@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+apply plugin: 'application'
+
+mainClassName = 'is.ru.hugb.TicTacToe'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.sparkjava:spark-core:2.6.0'
+    testImplementation 'junit:junit:4.12'
+}
+
