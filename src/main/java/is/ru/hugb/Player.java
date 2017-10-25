@@ -32,4 +32,8 @@ public class Player {
 	public void incrementWins() {
 		wins++;
 	}
+	
+	public void incrementLosses() {
+		losses++;
+	}
 }

@@ -18,4 +18,18 @@ public class PlayerTest {
 		p.incrementWins();
 		assertEquals(3, p.getWins());
 	}
+	@Test
+	public void testIncrementLosses() {
+		Player p = new Player("Auddi", 'X');
+		p.incrementLosses();
+		assertEquals(1, p.getLosses());
+	}
+	@Test
+	public void testIncrementThreeLosses() {
+		Player p = new Player("Auddi", 'X');
+		p.incrementLosses();
+		p.incrementLosses();
+		p.incrementLosses();
+		assertEquals(3, p.getLosses());
+	}
 }
