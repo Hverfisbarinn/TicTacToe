@@ -4,12 +4,14 @@ public class Board {
 	private char[] board;
 	
 	Board(){
-		board = new char[9];
+		board = "123456789".toCharArray();
 	}
 	
-	
-	
-	public static void main(String[] args) {
-		System.out.println("Hello World!");
-	}
+	public static boolean checkIfLegal(int move) {		
+		if(move < 0 || move > 9) {
+			return false;
+		}
+		
+		return true;
+	}	
 }
