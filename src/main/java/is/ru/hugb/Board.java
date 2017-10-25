@@ -8,15 +8,7 @@ public class Board {
 	}
 	
 	public boolean checkIfLegal(int move) {		
-		if(move <= 0 || move > 9) {
-			return false;
-		}
-		
-		if(board[move-1] == 'X' || board[move-1] == 'O') {
-			return false;
-		}
-		
-		return true;
+		return checkOutOfBounds(move) && checkIfAlreadyMarked(move);
 	}
 	
 	public char[] getBoard() {
@@ -29,6 +21,20 @@ public class Board {
 			return true;
 		}
 		return false;
+	}
+	
+	public boolean checkOutOfBounds(int move) {
+		if(move <= 0 || move > 9) {
+			return false;
+		}
+		return true;
+	}
+	
+	public boolean checkIfAlreadyMarked(int move) {
+		if(board[move-1] == 'X' || board[move-1] == 'O') {
+			return false;
+		}
+		return true;
 	}
 	
 }
