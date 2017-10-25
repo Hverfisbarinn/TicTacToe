@@ -3,6 +3,7 @@ package is.ru.hugb;
 public class Board {
 	private static char[] board;
 	private final int SIZE = 9;
+	private int numberOfMarked;
 	
 	Board(){
 		board = "123456789".toCharArray();
@@ -16,9 +17,14 @@ public class Board {
 		return board;
 	}
 	
+	public int getNumberOfMarked() {
+		return numberOfMarked;
+	}
+	
 	public boolean mark(int move, char symbol) {
 		if(checkIfLegal(move)) {
 			board[move-1] = symbol;
+			numberOfMarked++;
 			return true;
 		}
 		return false;

@@ -79,6 +79,18 @@ public class BoardTest {
 		assertEquals(true, b.isWin());
 	}
 	
+	@Test
+	public void testIncrementingNumberOfMarked() {
+		Board b = new Board();
+		
+		b.mark(1, 'O');
+		b.mark(5, 'O');
+		b.mark(9, 'O');		
+		
+		assertEquals(3, b.getNumberOfMarked());		
+	}
+	
+	
 	
 	
 }
