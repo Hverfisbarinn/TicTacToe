@@ -16,5 +16,16 @@ public class GameService {
 		player2 = new Player("Player 2", 'O');
 	}
 
+	public Board getBoard(){
+		return board;
+	}
+
+	public Player getPlayer1(){
+		return Player1;
+	}
+
+	public Player getPlayer2(){
+		return Player2;
+	}
 	
 }
