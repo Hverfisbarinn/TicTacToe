@@ -12,3 +12,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
