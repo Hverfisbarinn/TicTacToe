@@ -7,19 +7,23 @@ public class Board {
 		board = "123456789".toCharArray();
 	}
 	
-	public static boolean checkIfLegal(int move) {		
-		if(move < 0 || move > 9) {
+	public boolean checkIfLegal(int move) {		
+		if(move <= 0 || move > 9) {
+			return false;
+		}
+		
+		if(board[move-1] == 'X' || board[move-1] == 'O') {
 			return false;
 		}
 		
 		return true;
 	}
 	
-	public static char[] getBoard() {
+	public char[] getBoard() {
 		return board;
 	}
 	
-	public static boolean mark (int move, char symbol) {
+	public boolean mark(int move, char symbol) {
 		if(checkIfLegal(move)) {
 			board[move-1] = symbol;
 			return true;
