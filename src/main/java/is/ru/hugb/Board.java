@@ -72,4 +72,8 @@ public class Board {
 		return true;
 	}
 	
+	public boolean isFull() {
+		return numberOfMarked == SIZE;
+	}
+	
 }

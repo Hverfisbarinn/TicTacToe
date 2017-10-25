@@ -90,7 +90,22 @@ public class BoardTest {
 		assertEquals(3, b.getNumberOfMarked());		
 	}
 	
-	
+	@Test
+	public void testIsFull() {
+		Board b = new Board();
+		
+		b.mark(1, 'O');
+		b.mark(2, 'X');
+		b.mark(3, 'O');
+		b.mark(4, 'X');
+		b.mark(5, 'O');
+		b.mark(6, 'X');	
+		b.mark(7, 'O');
+		b.mark(8, 'X');
+		b.mark(9, 'O');	
+		
+		assertEquals(true, b.isFull());		
+	}
 	
 	
 }
