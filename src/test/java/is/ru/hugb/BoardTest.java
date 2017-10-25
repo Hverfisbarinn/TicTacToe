@@ -43,6 +43,42 @@ public class BoardTest {
 		assertEquals(board[4], 'O');
 	}
 	
+	@Test
+	public void testIsWinVertical() {
+		Board b = new Board();
+		assertEquals(false, b.isWin());
+		
+		b.mark(1, 'O');
+		b.mark(2, 'O');
+		b.mark(3, 'O');		
+		
+		assertEquals(true, b.isWin());
+	}
+	
+	@Test
+	public void testIsWinHorizontal() {
+		Board b = new Board();
+		assertEquals(false, b.isWin());
+		
+		b.mark(1, 'X');
+		b.mark(4, 'X');
+		b.mark(7, 'X');		
+		
+		assertEquals(true, b.isWin());
+	}
+	
+	@Test
+	public void testIsWinDiagonal() {
+		Board b = new Board();
+		assertEquals(false, b.isWin());
+		
+		b.mark(1, 'O');
+		b.mark(5, 'O');
+		b.mark(9, 'O');		
+		
+		assertEquals(true, b.isWin());
+	}
+	
 	
 	
 }
