@@ -12,4 +12,28 @@ public class Player {
 		wins = 0;
 		losses = 0;
 	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public char getSymbol() {
+		return symbol;
+	}
+	
+	public int getWins() {
+		return wins;
+	}
+	
+	public int getLosses() {
+		return losses;
+	}
+	
+	public void incrementWins() {
+		wins++;
+	}
+	
+	public void incrementLosses() {
+		losses++;
+	}
 }
