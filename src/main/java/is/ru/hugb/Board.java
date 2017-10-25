@@ -1,7 +1,7 @@
 package is.ru.hugb;
 
 public class Board {
-	private char[] board;
+	private static char[] board;
 	
 	Board(){
 		board = "123456789".toCharArray();
@@ -13,5 +13,18 @@ public class Board {
 		}
 		
 		return true;
-	}	
+	}
+	
+	public static char[] getBoard() {
+		return board;
+	}
+	
+	public static boolean mark (int move, char symbol) {
+		if(checkIfLegal(move)) {
+			board[move-1] = symbol;
+			return true;
+		}
+		return false;
+	}
+	
 }
