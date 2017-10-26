@@ -16,6 +16,9 @@ public class GameService {
 	public void makeMove(int move){
 		if(board.mark(move, currentPlayer.getSymbol())){
 			switchPlayer();
+			if(board.isWin()){
+				gameStatus = Status.WIN;
+			}
 		}
 	}
 

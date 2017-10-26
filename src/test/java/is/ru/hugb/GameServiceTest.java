@@ -38,5 +38,17 @@ public class GameServiceTest {
 		assertEquals('O', b[5]);
 	}
 
+	@Test
+	public void testMakeMoveWin(){
+		GameService service = new GameService();
+		
+		service.makeMove(1);
+		service.makeMove(4);
+		service.makeMove(2);
+		service.makeMove(5);
+		service.makeMove(3);
+		assertEquals(Status.WIN, service.getStatus());
+	}
+
 
 }
