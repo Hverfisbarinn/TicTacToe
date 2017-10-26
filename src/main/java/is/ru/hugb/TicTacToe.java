@@ -1,7 +1,9 @@
 package is.ru.hugb;
 
+import static spark.Spark.*;
+
 public class TicTacToe {
 	public static void main(String[] args) {
-		System.out.println("Hello World!");
+		get("/", (req, res) -> "Hello World");
 	}
 }
