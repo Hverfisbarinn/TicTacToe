@@ -7,25 +7,36 @@ public class GameService {
 		DRAW; 
 	}
 	private Board board;
-	private Player player1;
-	private Player player2;
+	private Player currentPlayer, player1, player2;
 
 	GameService(){
 		board = new Board();
 		player1 = new Player("Player 1", 'X');
 		player2 = new Player("Player 2", 'O');
+		currentPlayer = player1;
 	}
 
-	public Board getBoard(){
+	public void makeMove(int move){
+		if(board.mark(move, currentPlayer.getSymbol())){
+			if(currentPlayer == player1){
+				currentPlayer = player2;
+			}
+			else{
+				currentPlayer = player1;
+			}
+		}
+	}
+
+	public Board getGameBoard(){
 		return board;
 	}
 
 	public Player getPlayer1(){
-		return Player1;
+		return player1;
 	}
 
 	public Player getPlayer2(){
-		return Player2;
+		return player2;
 	}
 	
 }
