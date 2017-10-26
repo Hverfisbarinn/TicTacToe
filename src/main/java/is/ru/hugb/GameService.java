@@ -18,13 +18,17 @@ public class GameService {
 
 	public void makeMove(int move){
 		if(board.mark(move, currentPlayer.getSymbol())){
-			if(currentPlayer == player1){
-				currentPlayer = player2;
-			}
-			else{
-				currentPlayer = player1;
-			}
+			switchPlayer();
 		}
+	}
+
+	private void switchPlayer() {
+		if(currentPlayer == player1){
+			currentPlayer = player2;
+		}
+		else{
+			currentPlayer = player1;
+		}		
 	}
 
 	public Board getGameBoard(){
