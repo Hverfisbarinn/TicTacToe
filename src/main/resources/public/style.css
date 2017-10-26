@@ -1,0 +1,10 @@
+.btn{
+  width: 100px;
+  height: 100px;
+  border-radius: 0px;
+  margin-left: -4.5px;
+}
+
+.one, .two, .three{
+  border-top-color: 1px solid white;
+}
