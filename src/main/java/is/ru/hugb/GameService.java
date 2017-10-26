@@ -16,14 +16,18 @@ public class GameService {
 	public void makeMove(int move){
 		if(board.mark(move, currentPlayer.getSymbol())){
 			switchPlayer();
-			if(board.isWin()){
-				gameStatus = Status.WIN;
-			}else if(board.isFull()){
-				gameStatus = Status.DRAW;
-			}
-			else{
-				gameStatus = Status.INPLAY;
-			}
+			updateGame();
+		}
+	}
+
+	private void updateGame() {
+		if(board.isWin()){
+			gameStatus = Status.WIN;
+		}else if(board.isFull()){
+			gameStatus = Status.DRAW;
+		}
+		else{
+			gameStatus = Status.INPLAY;
 		}
 	}
 
