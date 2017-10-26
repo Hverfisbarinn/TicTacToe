@@ -1,11 +1,7 @@
 package is.ru.hugb;
 
 public class GameService {
-	private enum Status{
-		ACTIVE,
-		WIN,
-		DRAW; 
-	}
+	private Status gameStatus;
 	private Board board;
 	private Player currentPlayer, player1, player2;
 
@@ -14,6 +10,7 @@ public class GameService {
 		player1 = new Player("Player 1", 'X');
 		player2 = new Player("Player 2", 'O');
 		currentPlayer = player1;
+		gameStatus = Status.INPLAY;
 	}
 
 	public void makeMove(int move){
@@ -29,6 +26,10 @@ public class GameService {
 		else{
 			currentPlayer = player1;
 		}		
+	}
+
+	public Status getStatus(){
+		return gameStatus;
 	}
 
 	public char[] getBoard(){
