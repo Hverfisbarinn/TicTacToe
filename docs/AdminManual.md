@@ -15,5 +15,3 @@ To run this TicTacToe program on a fresh machine you need the following programs
 	1. Download and install the latest version of Git.
 	2. Set your username in Git.
 	3. Set your commit email address in Git. 
-
-
