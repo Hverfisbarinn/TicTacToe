@@ -12,8 +12,8 @@ dependencies {
 	compile 'org.slf4j:slf4j-simple:1.7.21'
     compile 'com.sparkjava:spark-core:2.6.0'
     testImplementation 'junit:junit:4.12'
+    compile 'com.sparkjava:spark-core:2.6.0'
+
 }
 
-task stage {
-    dependsOn installDist
-}
+task stage (dependsOn: installDist)
