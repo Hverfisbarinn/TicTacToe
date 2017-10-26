@@ -50,5 +50,35 @@ public class GameServiceTest {
 		assertEquals(Status.WIN, service.getStatus());
 	}
 
+	@Test
+	public void testMakeMoveDraw(){
+		GameService service = new GameService();
+		
+		service.makeMove(1);
+		service.makeMove(2);
+		service.makeMove(3);
+		service.makeMove(5);
+		service.makeMove(4);
+		service.makeMove(6);
+		service.makeMove(8);
+		service.makeMove(7);
+		service.makeMove(9);
+		assertEquals(Status.DRAW, service.getStatus());
+	}
+
+	@Test
+	public void testMakeMoveInplay(){
+		GameService service = new GameService();
+
+		service.makeMove(1);
+		service.makeMove(2);
+		service.makeMove(3);
+		service.makeMove(5);
+		service.makeMove(4);
+		service.makeMove(6);
+		assertEquals(Status.INPLAY, service.getStatus());
+
+	}
+
 
 }

@@ -18,6 +18,11 @@ public class GameService {
 			switchPlayer();
 			if(board.isWin()){
 				gameStatus = Status.WIN;
+			}else if(board.isFull()){
+				gameStatus = Status.DRAW;
+			}
+			else{
+				gameStatus = Status.INPLAY;
 			}
 		}
 	}
