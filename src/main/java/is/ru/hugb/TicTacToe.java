@@ -5,17 +5,17 @@ import static spark.Spark.*;
 public class TicTacToe {
 
 	public static void main(String[] args) {
-		port(getPort());
-		get("/", (req, res) -> "Hello World");
+        staticFileLocation("/public");
+        get("/", (req, res) -> "");
+        port(getHerokuAssignedPort());
 	}
 
-	static int getPort() {
-		ProcessBuilder psb = new ProcessBuilder();
-		if (psb.environment().get("PORT") != null) {
-			return Integer.parseInt(psb.environment().get("PORT"));
-		}
-
-		return 4567;
-	}
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+    }
 
 }
