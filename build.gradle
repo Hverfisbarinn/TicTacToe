@@ -7,13 +7,34 @@ repositories {
     mavenCentral()
 }
 
+sourceSets {
+  selenium
+}
+
 dependencies {
 	//Enables logging
 	compile 'org.slf4j:slf4j-simple:1.7.21'
-    compile 'com.sparkjava:spark-core:2.6.0'
+	
     testImplementation 'junit:junit:4.12'
+    
     compile 'com.sparkjava:spark-core:2.6.0'
 	compile group: 'org.json', name: 'json', version: '20171018'
+	
+	testCompile 'org.testng:testng:6.10'
+
+    seleniumCompile 'junit:junit:4.12'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
 }
 
 task stage (dependsOn: installDist)
+
+test.useTestNG()
+
+task selenium(type: Test, dependsOn: installDist) {
+  testClassesDir = sourceSets.selenium.output.classesDir
+  classpath = sourceSets.selenium.runtimeClasspath
+
+  doFirst {
+    'build/install/TicTacToe/bin/TicTacToe'.execute()
+  }
+}
