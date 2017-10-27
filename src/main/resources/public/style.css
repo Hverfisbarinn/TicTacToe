@@ -26,7 +26,7 @@ ul{
   opacity: 1;
 }
 
-#currPlayer{
+#status{
   position: relative;
   margin-left: 104px;
 }
