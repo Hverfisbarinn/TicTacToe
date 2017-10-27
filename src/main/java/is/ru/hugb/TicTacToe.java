@@ -13,11 +13,11 @@ public class TicTacToe {
 	
 	private JSONObject makeMove(String move) {
 		JSONObject obj = new JSONObject();
-		obj.put("board", service.getBoard());
 		obj.put("player", service.getCurrentPlayer().getName());
 		
 		service.makeMove(Integer.parseInt(move));
 		Status gameStatus = service.getStatus();
+		
 		if(gameStatus == Status.WIN) {
 			obj.put("status", "win");
 			service = new GameService();
