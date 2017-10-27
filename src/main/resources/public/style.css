@@ -22,11 +22,11 @@ ul{
   margin-bottom: 5px;
 }
 
+.btn:disabled{
+  opacity: 1;
+}
+
 #currPlayer{
   position: relative;
   margin-left: 104px;
-}
-
-.btn:disabled{
-  opacity: 1;
 }

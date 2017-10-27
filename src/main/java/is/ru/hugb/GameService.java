@@ -7,8 +7,8 @@ public class GameService {
 
 	GameService(){
 		board = new Board();
-		player1 = new Player("Player 1", 'X');
-		player2 = new Player("Player 2", 'O');
+		player1 = new Player("Player X", 'X');
+		player2 = new Player("Player O", 'O');
 		currentPlayer = player1;
 		gameStatus = Status.INPLAY;
 	}
@@ -37,7 +37,7 @@ public class GameService {
 		}
 		else{
 			currentPlayer = player1;
-		}		
+		}
 	}
 
 	public Status getStatus(){
@@ -47,7 +47,7 @@ public class GameService {
 	public char[] getBoard(){
 		return board.getBoard();
 	}
-	
+
 	public Player getCurrentPlayer() {
 		return currentPlayer;
 	}
@@ -59,5 +59,5 @@ public class GameService {
 	public Player getPlayer2(){
 		return player2;
 	}
-	
+
 }
