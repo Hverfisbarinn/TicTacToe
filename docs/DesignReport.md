@@ -25,15 +25,15 @@ Programming rules here.
 	![bracketsImage](../docs/images/brackets.png)
 
 
-3. All classes are named in PascalCasing
+3. All classes are named in PascalCasing.                                         
 	![classImage](../docs/images/class.png)
 
 
-4. All functions and variables are named in camelCasing.
+4. All functions and variables are named in camelCasing.                          
 	![funcImage](../docs/images/func.png)
 
 
-5. Space should always separate operators from variables.
+5. Space should always separate operators from variables.                          
 	![operatorImage](../docs/images/operator.png)
 
 
