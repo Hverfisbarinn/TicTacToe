@@ -51,13 +51,4 @@ public class GameService {
 	public Player getCurrentPlayer() {
 		return currentPlayer;
 	}
-
-	public Player getPlayer1(){
-		return player1;
-	}
-
-	public Player getPlayer2(){
-		return player2;
-	}
-
 }
