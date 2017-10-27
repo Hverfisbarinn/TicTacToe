@@ -12,17 +12,12 @@ $(document).ready(function(){
 			var object = JSON.parse(result);
 			var player = object.player;
 			if (object.status == "win") {
-        document.getElementById("status").innerHTML = player + " WINS!";
-        setTimeout(function(){ alert(player + " Won!");
-        resetGame();
-      }, 100);
-
+				document.getElementById("status").innerHTML = player + " WINS!";
+				setTimeout(function(){ alert(player + " Won!"); resetGame(); }, 100);
 			}
 			if (object.status == "draw") {
-        document.getElementById("status").innerHTML = "DRAW";
-        setTimeout(function(){ alert("DRAW");
-        resetGame();
-      }, 100);
+				document.getElementById("status").innerHTML = "DRAW";
+				setTimeout(function(){ alert("DRAW"); resetGame();}, 100);
 			}
 		}});
     });
