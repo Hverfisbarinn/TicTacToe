@@ -13,7 +13,7 @@ dependencies {
     compile 'com.sparkjava:spark-core:2.6.0'
     testImplementation 'junit:junit:4.12'
     compile 'com.sparkjava:spark-core:2.6.0'
-
+	compile group: 'org.json', name: 'json', version: '20171018'
 }
 
 task stage (dependsOn: installDist)
