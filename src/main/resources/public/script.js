@@ -26,6 +26,6 @@ $(document).ready(function(){
 function resetGame() {
 	for(var i = 1; i <= 9; i++){
 		$(document.getElementById(i)).css('background-image', 'none').removeAttr('disabled')
-    document.getElementById("status").innerHTML = "Player X";
+		document.getElementById("status").innerHTML = "Player X";
 	}
 }
