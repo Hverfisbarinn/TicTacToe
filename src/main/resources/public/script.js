@@ -1,10 +1,10 @@
 $(document).ready(function(){
     $("button").click(function(){
 		if(document.getElementById("currPlayer").innerHTML == "Player 1"){
-			$(this).css('background-image', 'url(img/x.png)');
+			$(this).css('background-image', 'url(img/x.png)').attr('disabled','disabled');
 			document.getElementById("currPlayer").innerHTML = "Player 2";
 		}else{
-			$(this).css('background-image', 'url(img/o.png)');
+			$(this).css('background-image', 'url(img/o.png)').attr('disabled','disabled');
 			document.getElementById("currPlayer").innerHTML = "Player 1";
 		}
 
@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 function resetGame() {
 	for(var i = 1; i <= 9; i++){
-		$(document.getElementById(i)).css('background-image', 'none');
+		$(document.getElementById(i)).css('background-image', 'none').removeAttr('disabled')
     document.getElementById("currPlayer").innerHTML = "Player 1";
 	}
 }
