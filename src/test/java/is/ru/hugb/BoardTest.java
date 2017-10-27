@@ -77,6 +77,15 @@ public class BoardTest {
 		b.mark(9, 'O');		
 		
 		assertEquals(true, b.isWin());
+
+		b = new Board();
+		assertEquals(false, b.isWin());
+
+		b.mark(3, 'O');
+		b.mark(5, 'O');
+		b.mark(7, 'O');		
+
+		assertEquals(true, b.isWin());
 	}
 	
 	@Test
