@@ -13,16 +13,18 @@ $(document).ready(function(){
 			var player = object.player;
 			if (object.status == "win") {
 				alert(player + " Won!");
-				for(var i = 1; i <= 9; i++){
-					$(document.getElementById(i)).css('background-image', 'none');
-				}
+				resetGame();
 			} 
 			if (object.status == "draw") {
 				alert("DRAW");
-				for(var i = 1; i <= 9; i++){
-					$(document.getElementById(i)).css('background-image', 'none');
-				}
+				resetGame();
 			}
 		}});
     });
 });
+
+function resetGame() {
+	for(var i = 1; i <= 9; i++){
+		$(document.getElementById(i)).css('background-image', 'none');
+	}	
+}
