@@ -8,19 +8,12 @@ public class TicTacToe {
 
 	TicTacToe(){
 		service = new GameService();
-	}
-	
-	public static void main(String[] args) {
-        staticFileLocation("/public");
-        port(getHerokuAssignedPort());
-        TicTacToe game = new TicTacToe();
         get("/makeMove/:move", (req, res) -> makeMove(req.params(":move")));
 	}
 	
 	private JSONObject makeMove(String move) {
 		JSONObject obj = new JSONObject();
 		obj.put("board", service.getBoard());
-		obj.put("player", service.getCurrentPlayer().getName());
 		
 		service.makeMove(Integer.parseInt(move));
 		Status gameStatus = service.getStatus();
@@ -43,4 +36,10 @@ public class TicTacToe {
         return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
+	public static void main(String[] args) {
+        staticFileLocation("/public");
+        port(getHerokuAssignedPort());
+        TicTacToe game = new TicTacToe();
+	}
+    
 }
