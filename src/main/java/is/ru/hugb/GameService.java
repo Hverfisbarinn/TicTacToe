@@ -47,6 +47,10 @@ public class GameService {
 	public char[] getBoard(){
 		return board.getBoard();
 	}
+	
+	public Player getCurrentPlayer() {
+		return currentPlayer;
+	}
 
 	public Player getPlayer1(){
 		return player1;
