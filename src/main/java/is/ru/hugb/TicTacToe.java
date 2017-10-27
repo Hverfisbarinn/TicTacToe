@@ -19,8 +19,10 @@ public class TicTacToe {
 		Status gameStatus = service.getStatus();
 		if(gameStatus == Status.WIN) {
 			obj.put("status", "win");
+			service = new GameService();
 		}else if(gameStatus == Status.DRAW) {
 			obj.put("status", "draw");
+			service = new GameService();
 		}else {
 			obj.put("status", "inplay");
 		}
