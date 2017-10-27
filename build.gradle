@@ -1,5 +1,6 @@
 apply plugin: 'java-library'
 apply plugin: 'application'
+apply plugin: 'jacoco'
 
 mainClassName = 'is.ru.hugb.TicTacToe'
 
@@ -38,3 +39,12 @@ task selenium(type: Test, dependsOn: installDist) {
     'build/install/TicTacToe/bin/TicTacToe'.execute()
   }
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+
+check.dependsOn jacocoTestReport
