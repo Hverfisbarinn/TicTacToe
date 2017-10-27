@@ -1,11 +1,15 @@
 h1{
-  margin-left: 43%
+  position: relative;
+  margin-left: 65px;
+}
+
+.board{
+  margin-left: calc(50% - 155px);
 }
 
 ul{
   width: 310px;
   height: 310px;
-  margin-left: 40%;
   padding-left: 0px;
   background-color: black;
 }
@@ -16,4 +20,9 @@ ul{
   border-radius: 0px;
   margin-right: 0.4px;
   margin-bottom: 5px;
+}
+
+#currPlayer{
+  position: relative;
+  margin-left: 104px;
 }
