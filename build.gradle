@@ -18,7 +18,6 @@ dependencies {
 	compile 'com.sparkjava:spark-core:2.6.0'
 	compile group: 'org.json', name: 'json', version: '20171018'
 	
-	testCompile 'junit:junit:4.12'
     testImplementation 'junit:junit:4.12'
     
     seleniumCompile 'junit:junit:4.12'
