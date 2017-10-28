@@ -2,9 +2,11 @@ $(document).ready(function(){
     $("button").click(function(){
 		if(document.getElementById("status").innerHTML == "Player X"){
 			$(this).css('background-image', 'url(img/x.png)').attr('disabled','disabled');
+			$(this).attr('symbol', 'X');
 			document.getElementById("status").innerHTML = "Player O";
 		}else{
 			$(this).css('background-image', 'url(img/o.png)').attr('disabled','disabled');
+			$(this).attr('symbol', 'O');
 			document.getElementById("status").innerHTML = "Player X";
 		}
 
@@ -25,7 +27,9 @@ $(document).ready(function(){
 
 function resetGame() {
 	for(var i = 1; i <= 9; i++){
-		$(document.getElementById(i)).css('background-image', 'none').removeAttr('disabled')
+		var id = document.getElementById(i);
+		$(id).css('background-image', 'none').removeAttr('disabled')
 		document.getElementById("status").innerHTML = "Player X";
+		$(id).attr('symbol', '');
 	}
 }
