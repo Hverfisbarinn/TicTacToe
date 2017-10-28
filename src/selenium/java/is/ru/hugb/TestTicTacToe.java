@@ -166,5 +166,23 @@ public class TestTicTacToe extends SeleniumTestWrapper {
     assertEquals("Player O Won!", alert.getText()); 
     alert.accept();
   } 
+
+@Test
+  public void testDoubleClick() throws Exception {
+    driver.get(baseUrl);
+
+    driver.findElement(By.id("1")).click(); //X
+    driver.findElement(By.id("1")).click(); //O
+    driver.findElement(By.id("2")).click(); //O
+    driver.findElement(By.id("2")).click(); //X
+
+    String one = driver.findElement(By.id("1")).getAttribute("symbol");
+    String two = driver.findElement(By.id("2")).getAttribute("symbol");
+
+    assertEquals("X", one);
+    assertEquals("O", two);
+  } 
+
+
   
 }

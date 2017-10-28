@@ -17,7 +17,7 @@ public abstract class SeleniumTestWrapper {
     driver = new ChromeDriver();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-    baseUrl = "https://staging-hverfisbarinn.herokuapp.com/";
+    baseUrl = "https://hverfisbarinn.herokuapp.com/";
   }
 
   @AfterClass
