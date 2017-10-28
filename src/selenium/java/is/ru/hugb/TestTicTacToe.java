@@ -30,14 +30,13 @@ public class TestTicTacToe extends SeleniumTestWrapper {
     driver.findElement(By.id("8")).click(); //X
     
     try{
-		Thread.sleep(2000);
-	}
-		catch(InterruptedException ie){
-	}  
-    
+      Thread.sleep(2000);
+    }
+      catch(InterruptedException ie){
+    }  
     Alert alert = driver.switchTo().alert();
-	assertEquals("DRAW", alert.getText());	
-	alert.accept();	
+	  assertEquals("DRAW", alert.getText());
+    alert.accept();
 
   }
   
@@ -53,14 +52,14 @@ public class TestTicTacToe extends SeleniumTestWrapper {
     driver.findElement(By.id("6")).click(); //O
     driver.findElement(By.id("7")).click(); //X
 	
-	try{
-		Thread.sleep(2000);
-	}
-		catch(InterruptedException ie){
-	}  
-	Alert alert = driver.switchTo().alert();
-	assertEquals("Player X Won!", alert.getText());
-	alert.accept();	
+    try{
+      Thread.sleep(2000);
+    }
+      catch(InterruptedException ie){
+    }  
+	  Alert alert = driver.switchTo().alert();
+	  assertEquals("Player X Won!", alert.getText());
+	  alert.accept();	
   }
   
   
@@ -77,15 +76,95 @@ public class TestTicTacToe extends SeleniumTestWrapper {
     driver.findElement(By.id("6")).click(); //X
     driver.findElement(By.id("8")).click(); //O
 
-	try{
-		Thread.sleep(2000);
-	}
-		catch(InterruptedException ie){
-	}  
-	Alert alert = driver.switchTo().alert();
-	assertEquals("Player O Won!", alert.getText());	
-	alert.accept();	
+    try{
+      Thread.sleep(2000);
+    }
+      catch(InterruptedException ie){
+    }  
+	  Alert alert = driver.switchTo().alert();
+	  assertEquals("Player O Won!", alert.getText());	
+	  alert.accept();	
   } 
   
+  @Test
+  public void testHorizontalWin() throws Exception {
+    driver.get(baseUrl);
+
+    driver.findElement(By.id("1")).click(); //X
+    driver.findElement(By.id("4")).click(); //O
+    driver.findElement(By.id("2")).click(); //X
+    driver.findElement(By.id("5")).click(); //O
+    driver.findElement(By.id("3")).click(); //X
+
+    try{
+      Thread.sleep(2000);
+    }
+      catch(InterruptedException ie){
+    }  
+    Alert alert = driver.switchTo().alert();
+    assertEquals("Player X Won!", alert.getText()); 
+    alert.accept();
+  } 
+
+  @Test
+  public void testVerticalWin() throws Exception {
+    driver.get(baseUrl);
+
+    driver.findElement(By.id("1")).click(); //X
+    driver.findElement(By.id("2")).click(); //O
+    driver.findElement(By.id("4")).click(); //X
+    driver.findElement(By.id("5")).click(); //O
+    driver.findElement(By.id("7")).click(); //X
+
+    try{
+      Thread.sleep(2000);
+    }
+      catch(InterruptedException ie){
+    }  
+    Alert alert = driver.switchTo().alert();
+    assertEquals("Player X Won!", alert.getText()); 
+    alert.accept();
+  } 
+
+  @Test
+  public void testDiagonalWinOne() throws Exception {
+    driver.get(baseUrl);
+
+    driver.findElement(By.id("1")).click(); //X
+    driver.findElement(By.id("2")).click(); //O
+    driver.findElement(By.id("5")).click(); //X
+    driver.findElement(By.id("4")).click(); //O
+    driver.findElement(By.id("9")).click(); //X
+
+    try{
+      Thread.sleep(2000);
+    }
+      catch(InterruptedException ie){
+    }  
+    Alert alert = driver.switchTo().alert();
+    assertEquals("Player X Won!", alert.getText()); 
+    alert.accept();
+  } 
+
+  @Test
+  public void testDiagonalWinTwo() throws Exception {
+    driver.get(baseUrl);
+
+    driver.findElement(By.id("1")).click(); //X
+    driver.findElement(By.id("3")).click(); //O
+    driver.findElement(By.id("2")).click(); //X
+    driver.findElement(By.id("5")).click(); //O
+    driver.findElement(By.id("4")).click(); //X
+    driver.findElement(By.id("7")).click(); //O
+
+    try{
+      Thread.sleep(2000);
+    }
+      catch(InterruptedException ie){
+    }  
+    Alert alert = driver.switchTo().alert();
+    assertEquals("Player O Won!", alert.getText()); 
+    alert.accept();
+  } 
   
 }
