@@ -31,10 +31,6 @@ task stage (dependsOn: installDist)
 task selenium(type: Test, dependsOn: installDist) {
   testClassesDir = sourceSets.selenium.output.classesDir
   classpath = sourceSets.selenium.runtimeClasspath
-
-  doFirst {
-    'build/install/TicTacToe/bin/TicTacToe'.execute()
-  }
 }
 
 jacocoTestReport {
