@@ -2,21 +2,33 @@
 
 ## Introduction
 
-For this late term assignment we are developing a simple TicTacToe game by using a technical infrastructure to support agile development. 
-The first thing we did was setting up a class diagram of the classes and functions needed for the game to work. The classes needed were implemented  using test driven design. 
+For this late term assignment we are developing a simple TicTacToe game by using a technical infrastructure to support agile development. The  game will be coded in Java and completed using test driven development.
 
 ## Environment
-Describe Environment used to develope.
+The team will use Gradle to test, run and build the program. Code will be written in Sublime Text and for source control we will use GitHub. Heroku will be used to deploy the app to a web server. Travis CI will be used to build and test our project hosted at GitHub.
+
 
 ## Description
-Description here.
+Tic-Tac-Toe is an old game in which two players alternately put X's and O's on a 3x3 grid. The game can be won by forming a row of three X's or three O's before the opponent does. If the board gets full with neither of the players getting a row of three then a draw is declared. 
 
 ## Class Diagram
-Class diagram here. 
+
+The first thing we did before starting to code was setting up a class diagram of the classes and functions needed for the game to work.
+
+
+
+![classDiagram](../docs/images/diagram.png)
+
+
+
+
+
+
+
+
 
 
 ## Programming Rules
-Programming rules here.
 
 1. For each feature we use a specific branch.
 
