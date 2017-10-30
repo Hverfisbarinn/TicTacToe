@@ -25,5 +25,3 @@
 - Tristan John Frantz <tristan16@ru.is>
 - Þórður Örn Helgason <thordurh16@ru.is>
 - Örn Friðriksson <orn16@ru.is>
-
-.
