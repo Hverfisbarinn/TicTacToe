@@ -18,6 +18,7 @@ public abstract class SeleniumTestWrapper {
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     baseUrl = "https://hverfisbarinn.herokuapp.com/";
+    //baseUrl = "localhost:4567";
   }
 
   @AfterClass
